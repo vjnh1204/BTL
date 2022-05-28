@@ -1,0 +1,51 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "vinhnt1301",
+    "password": "123456789"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "vinhnt1301",
+    "password": "123456789"
+}
+
+###
+
+POST http://localhost:5000/api/posts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjcwZmQzN2E2Y2UxZWVlYjUxNjNmYzQiLCJpYXQiOjE2NTE1NzIwMjN9.3Vynv1LgQzCUuw6hvS1xgppvyJRoCVQoP2iKSfKC5t4
+
+{   
+    "title": "name",
+    "description": "Welcome to",
+    "url" : "google.com",
+    "status" : "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjcwZmQzN2E2Y2UxZWVlYjUxNjNmYzQiLCJpYXQiOjE2NTE1NzI2ODR9.0s0Eq_cEDJahyHPAOWvxtykIGDyNsFNuGeSzMMz3XCI
+
+
+###
+PUT http://localhost:5000/api/posts/6270fd52a6ce1eeeb5163fc6/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjcwZmQzN2E2Y2UxZWVlYjUxNjNmYzQiLCJpYXQiOjE2NTE1NzI2ODR9.0s0Eq_cEDJahyHPAOWvxtykIGDyNsFNuGeSzMMz3XCI
+
+{
+    "title": "hello",
+    "description":"vue",
+    "url": "vue.org",
+    "status": "LEARNING"
+}
+
+###
+DELETE  http://localhost:5000/api/posts/627103f63d4ebad4e5c7ff9b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjcwZmQzN2E2Y2UxZWVlYjUxNjNmYzQiLCJpYXQiOjE2NTE1NzI2ODR9.0s0Eq_cEDJahyHPAOWvxtykIGDyNsFNuGeSzMMz3XCI
